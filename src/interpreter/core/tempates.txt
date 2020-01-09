@@ -1,0 +1,27 @@
+
+
+                                # 1
+num a = 10;
+num b = 15;
+str alfa = "petu";
+
+cond (a < 50) {
+	print a;
+	cond (a > 0) {
+		print a + 100000;
+	} else {
+		print "Lol ";
+	};
+};
+
+arr mas = ["Ti", "Sho", "Haha???"];
+num i = 0;
+verchu (i < 3) {
+	print mas[i];
+	i = i + 1;
+};
+
+//print "Yura";
+print "";
+print "Good One";
+

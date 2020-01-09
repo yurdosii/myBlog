@@ -1,0 +1,112 @@
+/* list item css*/
+
+.card-list-item,
+.card-detail-item {
+    background-color: #f4f4f4;
+    border: none;
+}
+
+.card-list-title {
+    border-bottom: 1px dotted #da521e;
+}
+
+.card-list-title h2 {
+    font-size: 1.7em;
+}
+
+.card-list-title a {
+    text-decoration: none;
+    color: #444444;
+}
+
+.card-list-title a:hover {
+    text-decoration: none;
+    color: #444444c9;
+}
+
+.card-list-date {
+    font-size: 0.8em;
+    color: #da521e;
+}
+
+.card-list-content {
+    font-size: 1.2em;
+}
+
+.card-read-more a:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-left: 12px solid #da521e;
+    font-size: 0;
+    line-height: 0;
+    margin-right: 10px;
+}
+
+.card-read-more a {
+    text-decoration: none;
+    color: #da521e;
+    font-size: 1.3em;
+}
+
+.card-read-more a:hover {
+    text-decoration: underline;
+}
+
+
+/* list paging style */
+
+.page-current {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.page {
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.page-link {
+    padding: 3px 35px;
+    margin: 0px 5px;
+    color: #444444;
+    border-color: #444444;
+    background-color: #fff;
+}
+
+.page-link:hover {
+    color: #444444;
+    border-color: #444444;
+    background-color: #dbdbdb;
+}
+
+
+/* detail item css*/
+
+.card-detail-title {
+    margin-bottom: 10px;
+}
+
+.card-detail-title h2 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.card-detail-date {
+    color: #da521e;
+    border: 1px dotted #da521e;
+    border-width: 1px 0;
+    font-size: 1.3em;
+    margin: 15px 0 40px;
+}
+
+.card-detail-content {
+    text-indent: 1.5em;
+    font-size: 1.2em;
+    letter-spacing: 0.7px;
+    word-spacing: 2px;
+}

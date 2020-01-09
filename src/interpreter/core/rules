@@ -1,0 +1,41 @@
+﻿                # Me Now
+program: statement_list | parse_html
+statement_list: statement
+                | statement SEMI statement_list
+statement : declaration
+            | assignment_statement
+            | function
+            | condition
+            | verchu
+            | do_verchu
+            | empty
+declaration: (NUM | STR | ARR)  assignment_statement
+
+assignment_statement : variable ASSIGN expr 
+
+function  : print 
+print     : PRINT expr
+
+condition : COND expr LBRACE program RBRACE 
+            (empty | ELSE LBRACE program RBRACE)
+
+verchu    : VERCHU expr LBRACE program RBRACE
+
+do_verchu : DO LBRACE program RBRACE VERCHU expr
+
+empty :  
+
+array: LBRACK (expr | expr (COMMA expr)* ) RBRACK
+
+expr   : term((PLUS | MINUS) term)  * 
+        | term (GREATER | LESS | EQUAL) expr
+term   : factor((MUL | DIV) factor) * 
+        | LBRACK expr RBRACK 
+factor : PLUS factor 
+        | MINUS factor 
+        | INTEGER 
+        | STRING
+        | array
+        | LPARAN expr RPARAN
+        | variable
+variable: ID

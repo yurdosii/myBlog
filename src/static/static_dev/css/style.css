@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    max-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    color: #444444;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.blog-logo h1 {
+    margin: 48px auto 50px;
+}
+
+.wrapper {
+    flex: 1;
+    /* min-height: 100%; */
+}
+
+
+/* .wrapper-content {
+    must be same height as the footer
+} */
+
+
+/* Subscribe form */
+
+.subscribe-container {
+    background-color: #fff;
+    /* clear: both; */
+}
+
+#form-subscribe {
+    padding: 1em 0;
+}
+
+#form-subscribe p {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 10px 10px 10px 0;
+    color: #000;
+}
+
+#form-subscribe input[type="email"] {
+    font-size: 1.1em;
+    font-weight: 300;
+    border-radius: 0;
+    color: #444444;
+    margin-right: 10px;
+    /* width: 35%; */
+}
+
+#form-subscribe input[type="email"]:focus {
+    box-shadow: inset 0 0 0 #ddd;
+    color: #000;
+    border-color: #000;
+}
+
+#form-subscribe input[type="submit"] {
+    font-size: 1.1em;
+    font-weight: 300;
+    border-radius: 0;
+    border: 1px solid #252525;
+    color: #fff;
+    background-color: #252525;
+}
+
+#form-subscribe input[type="submit"]:hover {
+    color: #000;
+    background-color: #fff;
+    transition: background-color 1s, color 2s;
+}
+
+
+/* Footer css */
+
+#footer {
+    height: auto;
+    /* position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* negative value of footer height */
+    clear: both;
+    color: #fff;
+    background-color: #252525;
+    padding-bottom: 1em;
+}
+
+.logo-footer a:before {
+    content: " ";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 50%;
+    z-index: 1;
+}
+
+.footer-image img {
+    border-radius: 50%;
+    border: 15px solid #201f1f;
+    margin-top: 40px;
+}
+
+.footer-about-header h4 {
+    font-size: 1.8em;
+    margin: 0 0 10px;
+    padding: 40px 0 5px;
+    font-weight: 400;
+}
+
+.footer-about-description {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.footer-button-container {
+    margin-top: 20px;
+}
+
+.btn-footer {
+    color: #fff;
+    background-color: #252525;
+    border: 2px solid #fff;
+    border-radius: 0;
+    transition: background-color 1s, color 1s;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+.btn-footer:hover {
+    color: #252525;
+    background-color: #fff;
+}
+
+#footer .list-inline a {
+    color: #fff;
+}
+
+#footer .list-inline a:hover {
+    color: #ffffff8f;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+
+/* Contact page css */
+
+.contact-title {
+    margin-bottom: 40px;
+    font-size: 3.2em;
+    font-weight: 300;
+}
+
+.form-contact-msg-submit input[type="text"],
+.form-contact-msg-submit input[type="email"],
+.form-contact-msg-submit textarea {
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.form-contact-msg-submit input[type="text"],
+.form-contact-msg-submit input[type="email"] {
+    border-width: 0 0 1px 0;
+    width: 50%;
+    background: url(../img/input_triangle_bg.png) no-repeat bottom left;
+}
+
+.form-contact-msg-submit input[type="text"]:focus,
+.form-contact-msg-submit input[type="email"]:focus {
+    border-color: #da521e;
+    background: url(../img/input_triangle_bg_active.png) no-repeat bottom left;
+    box-shadow: inset 0 0 0 #ddd;
+}
+
+.form-contact-msg-submit textarea {
+    border-radius: 0;
+}
+
+.form-contact-msg-submit textarea:focus {
+    color: #000;
+    /*.form-control:focus змінює */
+    border-color: #da521e;
+    box-shadow: inset 0 0 0 #ddd;
+}
+
+.form-contact-msg-submit input[type="submit"] {
+    color: #da521e;
+    background-color: #fff;
+    border: 2px solid #da521e;
+    border-radius: 0;
+    transition: background-color 1s, color 1s;
+    font-weight: 400;
+    font-size: 1em;
+    text-transform: uppercase;
+    float: right;
+    padding: 7px 20px;
+    margin-bottom: 15px;
+}
+
+.form-contact-msg-submit input[type="submit"]:hover {
+    color: #fff;
+    background-color: #da521e;
+}
+
+.class_2 {
+    color: green;
+}
+
+
+/* Interpreter style */
+
+.interpreter-title h1 {
+    font-size: 3em;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.interpreter-code-title h1,
+.interpreter-result-title h1 {
+    font-size: 2em;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+#textarea_code,
+#textarea_result {
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.btn-interpret {
+    color: #000;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 3px;
+    border: 1px solid #444444;
+    padding: 5px 100px;
+}
+
+.btn-interpret:hover {
+    color: #fff;
+    background-color: #444444;
+    transition: background-color 1s, color 1s;
+}

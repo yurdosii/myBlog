@@ -1,0 +1,19 @@
+<div class=" subscribe-container">
+    <div class="container">
+        <div class='row'>
+            <div class='col-12 col-md-8 offset-md-2'>
+                <form action="{% url 'subscribers:subscribe' %}" method="POST" id="form-subscribe" class="form-inline"> {% csrf_token %}
+                    <div class='form-group'>
+                        <p>Subscribe to be notificated about my new posts </p>
+                    </div>
+                    <div class='form-group'>
+                        <input type="email" name="email" placeholder="Your email address" class="form-control" malength="254" required>
+                    </div>
+                    <div class='form-group'>
+                        <input type='submit' class='btn' value="Subscribe Now">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    {% include "snippets/css.html" %}
+    {% block head_css %} {% endblock head_css %}
+
+    <title>{% block head_title %} {% endblock head_title %} | Yura Kosiv</title>
+  </head>
+  <body>
+
+    <div class="wrapper">
+        <div class="wrapper-content">
+            {% include "snippets/navbar.html" %}
+            <div class="blog-logo text-center">
+                <h1><a href="#"><img src=" {% static 'img/blog-logo.png' %}" alt="YuraKosiv"></a></h1>
+            </div>
+
+            {% block content %} 
+            {% endblock content %}
+        </div>
+    </div>
+    {% block content-outside-main-block %}
+    {% endblock content-outside-main-block %}
+
+    {% include "subscribers/form.html" %}
+    {% include "snippets/footer.html" %}
+    {% include "snippets/js.html" %}
+    {% block body_script %} {% endblock body_script %}
+  </body>
+</html>

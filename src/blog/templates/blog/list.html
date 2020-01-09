@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load mathfilters %}
+
+{% block head_title %}
+    Blog
+{% endblock head_title %}
+
+{% block head_css %} 
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/blog.css' %}" />
+{% endblock head_css %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for blog_post in blog_post_list %}
+            {# Each "blog_post" is a BlogPost model object. #}
+            {% include "blog/list_item.html" with blog_post=blog_post truncate=True %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block content-outside-main-block %}
+<ul class="pagination justify-content-center">
+    <li class="page page-item {% if not blog_post_list.has_previous %} disabled {% endif %}">
+        <a class="page-link" href="?page={{ blog_post_list.number|sub:1 }}">
+            Prev
+        </a>
+    </li>
+
+    <li class="page-current">
+        (Page {{ blog_post_list.number }} / {{ blog_post_list.paginator.num_pages }})
+    </li> 
+
+    <li class="page page-item {% if not blog_post_list.has_next %} disabled {% endif %}">
+        <a class="page-link" href="?page={{ blog_post_list.number|add:1 }}">
+            Next
+        </a>
+    </li>
+</ul>
+{% endblock content-outside-main-block %}
+
+
+
+
+{% comment %} {% if blog_post_list.has_previous %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ blog_post_list.previous_page_number }}"> {{ blog_post_list.previous_page_number }} </a>
+    </li>
+{% endif %} {% endcomment %}
+
+{% comment %} <li class="current">
+    (Page {{ blog_post_list.number }} of {{ blog_post_list.paginator.num_pages }}.)
+</li> {% endcomment %}
+
+{% comment %} {% if blog_post_list.has_next %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ blog_post_list.next_page_number }}"> {{ blog_post_list.next_page_number }}</a>
+    </li>
+{% endif %} {% endcomment %}

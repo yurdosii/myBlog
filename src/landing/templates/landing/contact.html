@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head_title %}Contact me{% endblock head_title %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-2">
+
+                <h1 class='contact-title'> Send Me A Message</h1>
+                <div>
+                    <form action="" method="POST" class="form form-contact-msg-submit text-left"> {% csrf_token %}
+                        <div class='form-group'>
+                            <input type="text" name="{{form.name.name}}" class="form-control" placeholder="Your Name" maxlength="128" required>
+                        </div>
+                        <div class='form-group'>
+                            <input type="email" name="{{form.email.name}}" class="form-control" placeholder="Your Email" maxlength="254" required>
+                        </div>
+                        <div class='form-group'>
+                            <textarea name="{{form.message.name}}" class="form-control" placeholder="Your Message" cols="40" rows="10"></textarea>
+                        </div>
+                        <input type='submit' class='btn' value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

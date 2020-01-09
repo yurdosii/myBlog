@@ -1,0 +1,43 @@
+<div class="col-12 col-md-10 offset-md-1">
+<div class="row">
+<div class="col-12 col-md-10 offset-md-1 mb-4">
+    <div class='card card-list-item {% if not blog_post.publish_date %} bg-dark text-light {% endif %}'>
+        <div class="card-body">
+
+            {% comment %} {% if blog_post.image %}
+                <div class="card-image">
+                    <a href="{{ blog_post.get_absolute_url }}">
+                        <img src="{{ blog_post.image.url }}" class="card-img-top img-responsive" />
+                    </a>
+                </div>
+            {% endif %} {% endcomment %}
+
+            <div class="card-list-title">
+                <h2><a href='{{ blog_post.get_absolute_url }}'> {{ blog_post.title }} </a> <span class="card-list-date">  {{ blog_post.publish_date.date }} </span> </h2>
+            </div>
+
+            <div class="card-list-content">
+                <p class="card-text">
+                    {% if truncate %}
+                        {{ blog_post.content|linebreaks|truncatewords:30 }}
+                    {% else %}
+                        {{ blog_post.content|linebreaks }}
+                    {% endif %}
+                </p>
+            </div>
+
+            {% if not blog_post.publish_date %}
+                <div class="card-draft">
+                    Draft 
+                </div>
+            {% endif %}
+
+            <div class="card-read-more">
+                <a class="read-more" href='{{ blog_post.get_absolute_url }}'>Read more ... </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>

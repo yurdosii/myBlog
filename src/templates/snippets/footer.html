@@ -1,0 +1,61 @@
+{% load static %}
+
+<div id="footer">
+    <div class="container h-100">
+        <div class="row h-100">
+
+            <div class="col-12 col-lg-2 my-auto">
+                <div class="logo-footer text-center">
+                    <h1><a href="#"><img src=" {% static 'img/blog-logo-footer.png' %}" alt="YuraKosiv"></a></h1>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-8 pb-2">
+                <div class="row h-100">
+                    <div class="col-12  col-md-4 pl-md-5  col-sm-4 text-center">
+                        <div class="footer-image">
+                            <img src="{% static 'img/blog-footer-image_3.png' %}" class="img-table-responsive" alt="me">
+                        </div>
+                    </div>
+                    <div class="col-12 pl-5  col-md-8 pl-md-1  col-sm-8 pl-sm-3">
+                        <div class="footer-about-header">
+                            <h4>About Yura</h4>
+                        </div>
+                        <div class="footer-about-description">
+                                I don't actually know who I am. Proooobably programmer, student. That's my first kinda professional project and I need more more more more more more text.
+                        </div>
+                        <div class="footer-button-container">
+                            {% comment %} <a href="#" class="btn btn-footer mr-2">
+                                    More about me
+                            </a> {% endcomment %}
+                            <a href="{% url 'contact' %}" class="btn btn-footer">
+                                    Contact me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-2 my-auto">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="https://t.me/yurdosii" target="_blank">
+                            <i class="fa fa-telegram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/yurdos_sii" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://github.com/yurdosii" target="_blank">
+                            <i class="fa fa-github"> </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
